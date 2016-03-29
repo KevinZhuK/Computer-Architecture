@@ -1,0 +1,61 @@
+MIPS Converter Program
+
+Class Book:
+1. Converter.java
+   - Instruction to Hex
+   (Support J / R/ I type)
+        -Test Case
+         @R_Type:
+                 Add $t1 $t2 $t3
+                 JR $t1
+                 sll $t2 $t1 0x10
+         @I_Type:
+                 Addi $t1 $t2 0x00FF
+                 Lw $t2 0x0001 $t0
+                 beq $s1 $s2 0x00ff
+         @J_Type:
+                 J 0x0000000f
+ 
+   - Hex to Instruction
+   (Support J / R/ I type)
+        -Test Case
+         @R_Type:   
+                 0x014B4820 
+                 0x01200008
+                 0x00095400
+         @I_Type:
+                 0x214900FF
+                 0x8D0A0001
+         @J_Type:
+                 0x082FFFFF
+        
+   
+2. Resource_Table.java
+   - Instruction Library, Instruction Format
+
+3. Parsing.java
+   - Provide string parsing and logic functions
+   
+4. MIPS_Converter.java 
+   - Main program entry
+   - Control Menu in console
+*************************************************   
+Compile & Run:
+-cd MIPS_Converter/src/Converter
+-Javac *.java
+-cd ..
+-Java Converter.MIPS_Converter
+************************************************* 
+How to test:
+-Follow the menu printed in console
+-use "ToHex" to convert from instruction to Hex
+-Type your instruction
+-use "ToInstr" to convert from Hex to instruction
+-Type your Hex
+-use "Exit" to exit 
+
+You can use the test case i list as above.
+************************************************* 
+
+Any questions please contact me directly.
+Regards
